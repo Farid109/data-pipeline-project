@@ -1,0 +1,12 @@
+etl:
+  source_file: "data/input_data.csv"
+  destination_file: "data/output_data.csv"
+
+transform:
+  drop_na: true
+  columns_to_keep:
+    - name
+    - age
+    - country
+  new_columns:
+    full_name: "name + ' Smith'"   # Example of adding a column with logic (can be handled in code)
